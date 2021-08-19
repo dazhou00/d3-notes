@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>extent</title>
+</head>
+
+<body>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    const arr = [3, 6, 6, 3, 1, 5, 5, 30]
+    const mode = d3.mode(arr)
+    console.log(mode)
+
+    const arrStr = [NaN, NaN, undefined, undefined, 1]
+    const modeStr = d3.mode(arrStr, (value, index, arr) => {
+      return value
+    })
+    console.log(modeStr)
+  </script>
+</body>
+
+</html>

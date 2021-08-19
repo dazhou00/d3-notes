@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>extent</title>
+</head>
+
+<body>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    const random = d3.randomLcg(10);
+    console.log(random)
+    const shuffle = d3.shuffler(random);
+    console.log(shuffle)
+    console.log((shuffle([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])));; // returns [7, 4, 5, 3, 9, 0, 6, 1, 2, 8]
+
+
+
+
+  </script>
+</body>
+
+</html>

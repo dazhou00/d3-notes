@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>max</title>
+</head>
+
+<body>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    const arr = [3, 6, 30, 4, 1, 5]
+    const maxIndex = d3.maxIndex(arr)
+    console.log(maxIndex)
+
+    const arrStr = ['6', '30', '4', '5']
+    const maxIndexStr = d3.maxIndex(arrStr, (value, index, arr) => {
+      console.log(value, index, arr)
+      return value
+    })
+    console.log(maxIndexStr)
+  </script>
+</body>
+
+</html>

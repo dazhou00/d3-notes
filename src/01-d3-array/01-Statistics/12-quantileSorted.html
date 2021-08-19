@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>extent</title>
+</head>
+
+<body>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    var a = [0, 10, 2, 5, 8, 9];
+    console.log(d3.quantileSorted(a, 0)) // 0
+    console.log(d3.quantileSorted(a, 0.5)) // 3.5
+    console.log(d3.quantileSorted(a, 1)) // 9
+    console.log(d3.quantileSorted(a, 0.25)) // 8
+    console.log(d3.quantileSorted(a, 0.75)) // 7.25
+    console.log(d3.quantileSorted(a, 0.1)) // 5
+
+
+  </script>
+</body>
+
+</html>

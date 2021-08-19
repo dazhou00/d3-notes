@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>extent</title>
+</head>
+
+<body>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    const arr = [1, 3, 5, 7, 9]
+    const bisect = d3.bisect(arr, 5)
+    const bisectLeft = d3.bisectLeft(arr, 5)
+    const bisectRight = d3.bisectRight(arr, 5)
+    const bisectCenter = d3.bisectCenter(arr, 5)
+    console.log('bisect', bisect)
+    console.log('bisectLeft', bisectLeft);
+    console.log('bisectRight', bisectRight);
+    console.log('bisectCenter', bisectCenter);
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    const cross = d3.cross([10, 20], ['x', 'y'])
+    console.log(cross)
+    const crossReducer = d3.cross([10, 20], ['x', 'y'], (i, j) => i + '*' + j)
+    console.log(crossReducer)
+  </script>
+</body>
+
+</html>

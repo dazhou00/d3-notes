@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    var data = [
+      { date: new Date(2011, 1, 1), value: 0.5 },
+      { date: new Date(2011, 2, 1), value: 0.6 },
+      { date: new Date(2011, 3, 1), value: 0.7 },
+      { date: new Date(2011, 4, 1), value: 0.8 }
+    ];
+
+    // const bisectDate = d3.bisector(function (d) { return d.date; }).right;
+    const bisectDate = d3.bisector(function (d, x) { return d.date - x; })
+
+    const indexRight = bisectDate.right(data, Date(2011, 3, 1))
+    const indexLeft = bisectDate.left(data, Date(2011, 3, 1))
+    const indexCenter = bisectDate.center(data, Date(2011, 3, 1))
+    console.log('left', indexLeft);
+    console.log('right', indexRight);
+    console.log('center', indexCenter);
+  </script>
+</body>
+
+</html>

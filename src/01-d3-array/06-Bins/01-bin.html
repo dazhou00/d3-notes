@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    const random = d3.randomUniform(1, 100)
+    let arr = []
+    for (let i = 0; i < 100; i++) {
+      arr.push(random())
+    }
+
+    console.log(arr)
+
+    const bin = d3.bin()
+
+    const buckets1 = bin(arr)
+
+    console.log(buckets1)
+
+  </script>
+</body>
+
+</html>

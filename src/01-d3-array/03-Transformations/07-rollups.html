@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>extent</title>
+</head>
+
+<body>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    const data = [
+      { name: "jim", amount: "34.0", date: "11/12/2015" },
+      { name: "carl", amount: "120.11", date: "11/12/2015" },
+      { name: "stacy", amount: "12.01", date: "01/04/2016" },
+      { name: "stacy", amount: "34.05", date: "01/04/2016" }
+    ]
+    const rollups = d3.rollups(data, v => v.length, d => d.name)
+    console.log(rollups)
+
+    console.log(d3.rollups(data, v => v.length, d => d.name, d => d.date));
+
+
+  </script>
+</body>
+
+</html>

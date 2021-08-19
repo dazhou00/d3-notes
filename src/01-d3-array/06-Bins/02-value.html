@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    const values = Array.from({ length: 100 }, (d, i) => ({
+      label: i,
+      p: Math.random()
+    }))
+
+    const bin = d3.bin().value(d => d.p);
+    console.log(bin(values));
+  </script>
+</body>
+
+</html>

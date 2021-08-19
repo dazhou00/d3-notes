@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>extent</title>
+</head>
+
+<body>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    var a = [0, 10, 2];
+    console.log(d3.quantile(a, 0)) // 0
+    console.log(d3.quantile(a, 0.5)) // 2
+    console.log(d3.quantile(a, 1)) // 10
+    console.log(d3.quantile(a, 0.25)) // 1
+    console.log(d3.quantile(a, 0.75)) // 6
+    console.log(d3.quantile(a, 0.1)) // 0.4
+
+
+  </script>
+</body>
+
+</html>
